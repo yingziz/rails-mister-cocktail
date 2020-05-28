@@ -1,0 +1,9 @@
+<h1>Cocktail details</h1>
+  <%= @cocktail.name %>
+<br>
+
+<%= link_to "See All Cocktails", cocktails_path, class: "btn btn-info" %>
+<br>
+<%= link_to "Edit this Cocktail", edit_cocktail_path(@cocktail), class: "btn btn-info" %>
+<br>
+<%= link_to "Delete This Cocktail", cocktail_path(@cocktail), class: "btn btn-info", method: :delete, data: { confirm: "Are you certain you want to delete?"} %>
