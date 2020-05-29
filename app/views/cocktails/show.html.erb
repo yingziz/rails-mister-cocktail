@@ -2,8 +2,16 @@
   <%= @cocktail.name %>
 <br>
 
+<%#= @cocktail.doses %>
+<br>
+
+<% @cocktail.doses.each do |dose| %>
+
+  <div class="col-4">
+    <%= render "doses/card", dose: dose %>
+  </div>
+<% end %>
+
+
 <%= link_to "See All Cocktails", cocktails_path, class: "btn btn-info" %>
 <br>
-<%= link_to "Edit this Cocktail", edit_cocktail_path(@cocktail), class: "btn btn-info" %>
-<br>
-<%= link_to "Delete This Cocktail", cocktail_path(@cocktail), class: "btn btn-info", method: :delete, data: { confirm: "Are you certain you want to delete?"} %>
